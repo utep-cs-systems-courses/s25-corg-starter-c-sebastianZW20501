@@ -26,3 +26,21 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+//Prints an arrow
+void print_arrow() {
+    int size = 5;  // Size of the triangle (the arrow's point)
+    int leftCol = 10;  // Leftmost column for the arrowhead
+
+    print_triangle(leftCol, size);
+    
+    for (int row = 0; row < size; row++) {
+        // Indentation for the shaft, aligned to the middle of the arrowhead
+        for (int col = 0; col < leftCol + size; col++) putchar(' ');
+        // Print the vertical shaft of the arrow
+        putchar('*');
+        putchar('\n');
+    }
+}
+
+
+
